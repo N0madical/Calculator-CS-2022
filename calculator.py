@@ -5,7 +5,6 @@
 import tkinter
 from tkinter import *
 import math
-import tkinter.font as font
 
 # Create Window
 master = Tk()

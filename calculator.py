@@ -74,7 +74,7 @@ def evaluatebox():
     try:
         if boxvar != "":
             boxvar = eval(str(boxvar))
-            if int(boxvar) >= 1:
+            if type(boxvar) == int:
                 # Adjusting format to avoid displaying scientific notation
                 boxvar = str(format(boxvar, '.0f'))
             textbox.insert(0.0, boxvar)
@@ -103,20 +103,20 @@ def evaluatebox():
 one = Button(master, text="1", command=lambda: updatebox(1))
 two = Button(master, text="2", command=lambda: updatebox(2))
 three = Button(master, text="3", command=lambda: updatebox(3))
-AC = Button(master, text="AC", command=lambda: clearbox(1))
+AC = Button(master, text="AC", command=lambda: clearbox(1), bg="#c8c8c8")
 four = Button(master, text="4", command=lambda: updatebox(4))
 five = Button(master, text="5", command=lambda: updatebox(5))
 six = Button(master, text="6", command=lambda: updatebox(6))
-divide = Button(master, text="÷", command=lambda: updatebox("/"))
+divide = Button(master, text="÷", command=lambda: updatebox("/"), bg="#c8c8c8")
 seven = Button(master, text="7", command=lambda: updatebox(7))
 eight = Button(master, text="8", command=lambda: updatebox(8))
 nine = Button(master, text="9", command=lambda: updatebox(9))
-multiply = Button(master, text="x", command=lambda: updatebox("*"))
+multiply = Button(master, text="x", command=lambda: updatebox("*"), bg="#c8c8c8")
 point = Button(master, text=".", command=lambda: updatebox("."))
 zero = Button(master, text="0", command=lambda: updatebox(0))
-subtract = Button(master, text="-", command=lambda: updatebox("-"))
-add = Button(master, text="+", command=lambda: updatebox("+"))
-equals = Button(master, text="=", command=lambda: evaluatebox())
+subtract = Button(master, text="-", command=lambda: updatebox("-"), bg="#c8c8c8")
+add = Button(master, text="+", command=lambda: updatebox("+"), bg="#c8c8c8")
+equals = Button(master, text="=", command=lambda: evaluatebox(), bg="#f39c12")
 
 # Define Button Object Names In An Array For Easy Handling
 buttonnames = ["null", one, two, three, AC, four, five, six, divide, seven, eight, nine, multiply, point, zero, subtract, add, equals]
